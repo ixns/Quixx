@@ -1,17 +1,11 @@
 from django.db import models
+from django.utils import timezone
+from django.contrib import admin
+
 import datetime
-import ../globals
 
 class QuixxGame(models.Model):
 	start_date = models.DateTimeField('date game was started')
-	player_count = models.IntegerField('the number of players in the game')
-	player_1 = models.CharField(max_length=globals.max_username_length)		
-	player_2 = models.CharField(max_length=globals.max_username_length)		
-	player_3 = models.CharField(max_length=globals.max_username_length)		
-	player_4 = models.CharField(max_length=globals.max_username_length)		
-
-	
-	
 
 	@admin.display(
 		boolean=True,
